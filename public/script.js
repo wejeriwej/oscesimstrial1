@@ -1814,7 +1814,7 @@ var response_question = "I'm Marc";//delete these in the real thing
 
 
 const generateResponse = async (input) => {
-  const response = await fetch("https://openai-question-generator.onrender.com/api/oscetrial", {
+  const response = await fetch("https://oscesimstrial1.onrender.com/api/oscetrial", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ 
