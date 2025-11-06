@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--IS FOR THE HEADER ICON AND FORMAT-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css"><!--IS FOR THE HEADER ICON AND FORMAT-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><!--IS FOR THE HEADER ICON AND FORMAT-->
+    <link rel="icon" type="image/png" href="art/logoupdated1.png">
+
+    
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9ff;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            text-align: left;
+
+            margin: 5px 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #name, #email, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            outline: none;
+        }
+        button {
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #007BFF;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+        }
+        #profilepic {
+    width: 150px;  /* Adjust size as needed */
+    height: 150px; /* Should be equal to width for a perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    border: 3px solid #000000; /* Adjust border color and thickness */
+    object-fit: cover; /* Ensures the image is cropped properly */
+}
+
+
+@media (max-width: 1200px) {
+        .container {
+            width: 90%; /* Make container take up more space on smaller screens */
+            padding: 20px;
+            margin: 20px auto; /* Adjust margin */
+        }
+
+        h2 {
+            font-size: 1.5em; /* Adjust heading size */
+        }
+
+        .contact-info p {
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+
+        .contact-form {
+            padding: 0 10px; /* Add padding inside the form */
+        }
+
+        label {
+            font-size: 14px; /* Smaller font for labels */
+        }
+
+        #name, #email, textarea {
+            padding: 8px;
+            font-size: 14px; /* Smaller input field font size */
+        }
+
+        button {
+            padding: 12px;
+            font-size: 14px; /* Adjust button font size */
+        }
+
+        .social-links a {
+            font-size: 18px; /* Smaller icons on social links */
+        }
+    }
+
+    /* For very small screens (below 480px) */
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.3em; /* Even smaller heading */
+        }
+
+        .contact-info p {
+            font-size: 12px; /* Smaller text size for very small screens */
+        }
+
+        #profilepic {
+            width: 80px; /* Make profile pic smaller */
+            height: 80px;
+        }
+
+        .social-links a {
+            font-size: 16px; /* Smaller social icon size */
+        }
+
+        button {
+            padding: 10px; /* Smaller button padding */
+            font-size: 12px; /* Adjust button font size for small screens */
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="added.js"></script>
+
+    <special-header></special-header>
+
+    <div class="container">
+        <h2>About Us</h2>
+        <br>
+        <div class="contact-info">
+            <img src="pics/aboutuspic.jpeg" id="profilepic" alt="OSCE Training">
+<br><br><br>
+<p>My name is Zak, and I am a Foundation Year 2 doctor currently working in Leicester. I completed my medical degree at Hull York Medical School, where I developed a strong passion for both clinical practice and medical education.</p>
+<br>
+<p>In my free time, I enjoy learning how to code, as I believe that technology has the potential to enhance medical education and improve accessibility to high-quality learning resources. This passion led me to create OSCE Sims, a platform designed to support medical students in preparing for their Objective Structured Clinical Examinations (OSCEs).</p>
+<br><p>During my own training, I noticed a significant gap in resources available for independent OSCE practice. Many students struggle to find high-quality, structured materials, and practicing effectively often requires having a study partner, which isn’t always feasible. Recognizing this challenge, I wanted to develop a solution that would allow students to practice OSCEs independently, ensuring they can refine their clinical skills and build confidence regardless of their circumstances.</p>
+<br><p>Through OSCE Sims, my goal is to provide an interactive and accessible tool that empowers medical students to excel in their exams and, ultimately, become more competent and confident clinicians.</p>     
+
+<br><br><br><br>
+<p style="text-align: center;"><strong>Email:</strong> oscesims@gmail.com</p>
+            <p style="text-align: center;"><strong>Whatsapp:</strong> +44 480 609 640</p><br><br><br>
+            <!--<p><strong>Address:</strong> 123 Business Street, City, Country</p>-->
+        </div>
+           </div>
+
+    <other-cases></other-cases>
+    <special-footer></special-footer>
+
+</body>
+</html>

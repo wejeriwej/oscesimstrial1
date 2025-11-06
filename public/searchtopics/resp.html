@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+    
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+        body {
+            font-family: LTSoul;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sidebar {
+            width: 25%;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 15px;
+            height: 92vh;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url("../art/cork-wallet.webp");
+            color:rgb(37, 140, 113)
+
+        }
+        .fa-circle {
+            color: orangered;
+        }
+        .searchBar {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 3px;
+            padding: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .glass:hover {
+            color: orangered;
+            cursor: pointer;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa-brands {
+            font-size: 25px;
+            margin: 0 10px;
+            color: #333;
+            cursor: pointer;
+        }
+        .fa-brands:hover {
+            color: orangered;
+        }
+        .data {
+            width: 73%;
+            border-radius: 3px;
+            height: 92vh;
+            overflow-y: auto;
+        }
+        .top {
+            height: 60px;
+            border-radius: 3px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .header {
+            height: 200px;
+            border-radius: 3px;
+            background-color: #333;
+            margin: 3vh 0px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("../art/backgroundimgtrial.jpg");
+            opacity: 0.75;
+            filter: brightness(95%);
+
+        }
+        .header p {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+
+            
+        }
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            
+
+        }
+
+        .box {
+            margin: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 0px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            cursor: pointer;
+
+        }
+
+        .box:hover {
+        box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+        opacity: 0.75;
+}
+
+
+        .img-box {
+            width: 100%;
+            height: 176px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images {
+            max-height: 100%;
+            max-width: 100%;
+            height: 876px;
+            object-fit: cover;
+            object-position: center;
+
+            border-radius: 5px 5px 0 0;
+  
+
+        }
+        .bottom {
+            margin-top: 0px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+        }
+        h2 {
+            font-size: 20px;
+            color: rgb(138, 140, 37);
+        }
+     
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        p, h2, h3 {
+            font-family: LTSoul;
+        }
+
+ 
+        
+
+
+
+        #casebytopic {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style links to look like buttons */
+#casebytopic li a {
+    display: inline-block;
+    width: 200px; /* Default width for desktop */
+    max-width: 90%; /* Adjust for smaller screens */
+    padding: 12px 15px; /* More padding for easier touch */
+    background-color: white;
+    color: rgb(138, 140, 37);
+    border: 2px solid rgb(138, 140, 37);
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect (for desktop) */
+#casebytopic li a:hover {
+    background-color: rgba(173, 216, 230, 0.3);
+    color: rgb(110, 112, 30);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {  
+    #casebytopic li a {
+        width: 130px; /* Slightly smaller fixed width on mobile */
+        font-size: 13px; /* Keep text proportional */
+        padding: 12px 14px; /* Increase padding for touch */
+    }
+    #df{
+        display: none;
+    }
+}
+
+/* Active/tap effect (for mobile users) */
+#casebytopic li a:active {
+    background-color: rgba(173, 216, 230, 0.5); /* Slightly darker blue */
+    transform: scale(0.98); /* Tap effect */
+}
+
+
+
+
+
+
+
+
+
+
+        @media (max-width: 768px) {  /* Targets tablets and smaller devices */
+    .header p {
+        font-size: 30px;
+    }
+    h3 {
+
+        font-size: 13px;
+    }
+    h2 {
+
+font-size: 17px;
+}
+.searchBar {
+padding: 2px;}
+        }
+
+         /*  button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            padding: 3px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover {
+            background-color: rgb(201, 188, 70);
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <special-header></special-header>
+    <br><br>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidehead">
+                <div class="dots">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle" style="color: #333;"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+            </div>
+            <div class="sidebody" style="height: 69vh;">
+                <div class="searchBar">
+                    <input placeholder="Search cases..." id="searchBar" name="searchBar" type="text">
+                    <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+                </div>
+                <br id="df"><br id="df"><br id="df"><br>
+                <center><p>Search by topic:</p></center>
+<center>
+                    <ul id = "casebytopic" style="  list-style-type: var(--bullet-style);--bullet-style: none;            color: rgb(138, 140, 37);
+">
+                        <li>
+                            <a href="../webpages/searchbarr.html" style="border-radius: 0%; border-radius: 0%;">All cases</a>    
+                        </li>
+                        <li>
+                        <a href="cardio.html" style="border-radius: 0%; border-radius: 0%;">Cardiology</a>
+                    </li>
+                    <li>
+                      <a href="resp.html" style="border-radius: 0%;">Respiratory</a>
+                    </li>
+                    <li>
+                      <a href="gensurg.html" style="border-radius: 0%; border-radius: 0%;">General surgery</a>
+                    </li>
+                    <li>
+                      <a href="neurology.html" style="border-radius: 0%; border-radius: 0%;">Neurology</a>
+                      </li>
+                    </ul></li></center>
+
+
+
+            </div>
+            <div class="sidefoot">
+                <hr style="margin: 15px 0; border: 1px solid #eee">
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-github"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="data">
+            <div class="top">
+                <p>Learn. Grow. Succeed.</p>
+                <p>oscesims@gmail.com</p>
+            </div>
+            <div class="header">
+                <p>RESPIRATORY:</p>
+            </div>
+            <div class="body">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const product = [
+            {
+                id: 0,
+                image: '../pics/3rdcase.png',
+                title: 'Daniel Carter',
+                topic: 'Cough',
+                difficulty: '🔴',
+                link: '../OTHERCASES/3rdcase/page1.html'
+
+            },
+            
+            
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+        document.getElementById('searchBar').addEventListener('keyup', (e) => {
+            const searchData = e.target.value.toLowerCase();
+            const filteredData = categories.filter((item) => {
+                return (
+                    item.title.toLowerCase().includes(searchData) || 
+                    item.topic.toString().toLowerCase().includes(searchData)
+
+                )
+            })
+            displayItem(filteredData)
+        });
+
+        const displayItem = (items) => {
+            document.getElementById('root').innerHTML = items.map((item) => {
+                var { image, title, topic, difficulty, link } = item;
+                return (
+                    `<div class='box' onclick="navigateToPage('${link}')">
+                        <div class='img-box'>
+                            <img class='images' src=${image}></img>
+                        </div> 
+                        <div class='bottom'>
+                            <h3>${title}</h3>
+                            <h2>${topic}</h2>
+                            <p>${difficulty}</p>
+
+                       <!-- <button>Start</button> -->
+                        </div>
+                    </div>`
+                )
+            }).join('')
+        };
+        displayItem(categories);
+
+        function navigateToPage(link) {
+      window.location.href = link;
+    }
+
+     // Focus the search bar when the page loads
+     document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('searchBar').focus();
+    });
+
+    </script>
+    <special-footer></special-footer>
+    <script src="../script.js"></script>
+    <script src="added.js"></script>
+</body>
+
+</html>
+
+
+
+
+<html>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="searchengine.css">
+    </head>
+    <body>
+        <div class="container">
+        
+        <script src="searchengine.js"></script>
+    
+        
+
+    </body>
+</html>
+</html>
+

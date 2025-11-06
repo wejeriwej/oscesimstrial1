@@ -1,0 +1,3375 @@
+@font-face {
+  font-family: Cheflat;
+  src: url(fonts/Cheflat.ttf);
+}
+
+@font-face {
+  font-family: Involve;
+  src: url(fonts/Involve.ttf);
+}
+
+@font-face {
+  font-family: LTSoul;
+  src: url(fonts/LTSoul.otf);
+}
+
+@font-face {
+  font-family: LTSoulBold;
+  src: url(fonts/LTSoul-Bold.otf);
+}
+
+
+
+#topheader {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: lightcyan;
+  height: 110px;
+  
+}
+
+#logo {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: -12px;
+ 
+  height: 63px;
+  width: 125px; /*width: 320px;*/
+}
+
+.logoplacement{
+  /*text-align: center;*/
+  
+  float: left;
+  margin-right: 5px;
+  margin-left: 7.5%;
+ 
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .logoplacement{
+    margin-left: 15px;
+  }}
+
+@media screen and (max-width: 600px) {
+  .logoplacement{
+    margin-left: 5px;
+  }}
+
+  
+
+
+
+.nav-area{
+  
+  padding: 3px;
+  border-radius: 5px;
+  font-family: LTSoul;
+  /*display: inline-block; */
+}
+
+/*#positionofeachheaderbtn {
+  margin-left: 20%
+}*/
+
+
+
+
+#navigationtings li{
+  padding-right: 10px;
+  display : in-line;
+  /*float: right;*/
+  
+}
+
+@media screen and (max-width: 650px) {
+  #navigationtings li{
+    padding-right: 0px;
+  }}
+
+  @media screen and (max-width: 850px) {
+    #navigationtings li{
+      padding-right: 5px;      
+    }}
+
+    @media screen and (max-width: 950px) {
+      #navigationtings li{
+        padding-right: 10px;      
+      }}
+
+
+
+
+
+      .loginbtn{
+        margin-left: -30px;
+        float: right;
+        padding-right: 0px;
+        margin-right: 6.8%;
+        
+        }
+
+        @media screen and (max-width: 1000px) {
+          .loginbtn{
+            margin-right: 0px;
+          }}
+        
+        @media screen and (max-width: 600px) {
+          .loginbtn{
+            margin-right: -10px;
+          }}
+
+
+
+
+
+
+
+
+        .searchbtn{
+          margin-right: 15px;
+          float: right;
+        }
+
+
+
+
+li {
+  list-style-position: outside;
+  
+}
+
+
+#casebytopiclayout li{
+  padding: 0px;
+  border-radius: 0%;
+}
+
+
+
+
+#headerplacement{
+  width: 100%;
+
+}
+
+
+/*
+#headerplacement ul{
+  text-align: center;
+
+}
+
+#headerplacement li{
+  display: inline-block;
+
+}*/
+
+
+
+/*
+.homebtn {
+  margin-right : 20%;
+  text-align: centre;
+}
+
+
+
+
+.secondheaderbtn{
+  margin-right: 20%;
+}
+
+.thirdheaderbtn{
+  margin-right: 20%;
+
+}
+*/
+
+/*
+.titlepagefront {
+  margin-left: 3.5%;
+  font-size: 300%;
+  font-size-adjust: 0.58;
+
+
+
+  font-weight: 100;
+  font-display: white;
+  display: inline-block;
+  margin-right: 0px;
+  height: 10px;
+  }
+
+.indexpage {
+  margin-left: 10%;
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 0px;
+  height: 10px;
+  
+  
+  }
+
+.case1header {
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 0px;
+  height: 10px;
+}
+
+.case2header {
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 0px;
+  height: 10px;
+}
+
+
+.title{
+  margin-left: 3.5%;
+  margin-top: 10px;
+  margin-right: 3.5%;
+  margin-bottom: 10px;
+}
+
+*/
+
+#errormsg {
+  animation: fadeInOut 2s infinite;
+  color: #be6a6a;
+  z-index: 300;
+  position: fixed;
+  bottom: 30%;
+  left: 1%;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+#page-description {
+  margin-left: 3.5%;
+  margin-top: 10px;
+  margin-right: 3.5%;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+
+
+#review-section ul:nth-child(1){
+  list-style: '● ';
+  
+  margin-left: -25px;
+
+}
+
+
+.j1 {
+  /*margin-left: -25px;*/
+  list-style: none;
+  list-style: '- ';
+}
+
+.explanationparagraph{
+  margin-left: 3%;
+  margin-right: 1px;
+  font-size: 12px;
+  font-style: italic;
+  list-style: '- ';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logoduringconsultation{
+  top: 20px;
+  left: 118px;
+  position: absolute;
+  z-index: 1;
+  height: 35px;
+  width: 60px;
+  display: none;
+  opacity: 0.3;
+}
+
+
+
+
+
+#countdown-value {
+  font-size: 30px;
+  display: none;
+  z-index: 1;
+  color:#e3bf90;
+  top: 10px;
+  right: 110px;
+  position: absolute;
+}
+
+#pause-countdown {
+  margin: 0 5px;
+  padding: 1px 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 35px;
+  display: none;
+  z-index: 1;
+
+  top: 47px;
+  right: 118px;
+  position: absolute;
+
+  background-color:transparent;
+  background-color: #bbb;
+  color:rgb(183, 113, 113);
+  opacity: 0.5;
+  /*border: solid black 1px; */
+
+  background-image: url("art/pause_button_black_and_white-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px 17px; /* add some padding to the button to make it more clickable */
+  /* add any other styling as needed */
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  float:left;/*Consider removing this if you want to make it central in the whole page*/
+  
+
+  
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: -10px;
+  
+  
+}
+
+#slider {
+  width: 150px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1100px){
+  #slider {
+    width: 135px;
+      }}
+
+      
+@media only screen and (max-width: 900px){
+  #slider {
+    width: 100px;
+      }}
+
+      @media only screen and (max-width: 650px){
+        #slider {
+          width: 150px;
+            }}
+
+
+#slider-value {
+  font-size: 15px;
+  margin-bottom: -2.5px;
+  font-family: LTSoul;
+}
+
+@media only screen and (max-width: 720px){
+  #slider-value {
+    display: none;
+      }}
+
+      @media only screen and (max-width: 650px){
+        #slider-value {
+          display: unset;
+            }}    
+
+input[type=range] {
+  width: 100%;
+  height: 10px;
+  background: #a0a0a0; /* background: #d3d3d3; */
+  outline: none;
+  border-radius: 15px;
+}
+
+
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  
+  background: #f0c88c; /* Default thumb color */
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb:hover { 
+  background: #845e27;
+  border: 2px solid #000000;
+}
+
+
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#countdown-updated{
+  font-size: 40px;
+  margin-bottom: 0px;
+  font-family: LTSoul;
+}
+
+.buttons-container {
+  display: flex; 
+}
+
+#pause-countdown:hover {
+  background-color: #eee;
+  padding: 20px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#executeButton{
+  
+  position: absolute;
+
+  z-index: 2;
+  right: 118px;
+bottom: 20px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+  .linebreakremove {display: none;}}
+
+
+
+
+
+
+
+#start-consultation-btn,#stop-consultation-btn,#end-consultation-btn,#move-onto-questions-btn
+, #move-onto-questions-btn_examinations,#end-consultation-btn1, #move-onto-questions-btn_summary, #move-onto-questions-btn_differentials, 
+#move-onto-questions-btn_investigations, #move-onto-questions-btn_riskfactors, #move-onto-questions-btn_treatments{
+  height: 80px;
+  width: 40%;
+  padding: 5px;
+  border: solid black 3px; 
+
+  background-color: rgb(249, 191, 191);
+  color:black;
+  font-size: 2.2em;
+  z-index: 1;
+  
+
+  
+}
+
+#start-consultation-btn:hover,#stop-consultation-btn,#end-consultation-btn,#move-onto-questions-btn
+, #move-onto-questions-btn_examinations,#end-consultation-btn1, #move-onto-questions-btn_summary, #move-onto-questions-btn_differentials, 
+#move-onto-questions-btn_investigations, #move-onto-questions-btn_riskfactors, #move-onto-questions-btn_treatments{
+  background-color: #eee;
+}
+
+#stop-consultation-btn:hover,#end-consultation-btn:hover,#move-onto-questions-btn:hover
+, #move-onto-questions-btn_examinations:hover,#end-consultation-btn1:hover, #move-onto-questions-btn_summary:hover, #move-onto-questions-btn_differentials:hover, 
+#move-onto-questions-btn_investigations:hover, #move-onto-questions-btn_riskfactors:hover, #move-onto-questions-btn_treatments:hover{
+  background-color: #de9595;
+}
+
+
+#stop-consultation-btn{
+  /*top: 88%;
+  left: 0.3%;*/
+  left: 118px;
+  bottom: 20px;
+
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  border: solid black 0px; 
+    opacity: 1;
+}
+
+
+
+#move-onto-questions-btn, #move-onto-questions-btn_examinations, #move-onto-questions-btn_summary, #move-onto-questions-btn_differentials, 
+#move-onto-questions-btn_investigations, #move-onto-questions-btn_riskfactors, #move-onto-questions-btn_treatments{
+  top: 88%;
+  left: 2.5%;
+  position: absolute;
+
+}
+
+#end-consultation-btn, #end-consultation-btn1{
+  top: 88%;
+  right: 2.5%;
+  position: absolute;
+  font-size: 1.7em;
+
+}
+
+@media screen and (max-width: 800px) {
+  #start-consultation-btn,#stop-consultation-btn {
+    
+    width: 100%;
+    
+  }
+}
+
+#recording-instructions,#start-record-btn,#save-note-btn,#note-textarea{
+  display:none;
+}
+
+#review-section, #examinations, #summary, #differentials, #investigations, #end-consultation-btn,
+#move-onto-questions-btn,#stop-consultation-btn, #loadingcircle, #riskfactors, #treatments, #replayButton, #home, #executeButton{
+  display:none;
+}
+
+#allthiscango{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+#silencemessage, #emptyif{
+margin:auto;
+position: absolute;
+  left: 0;
+  right: 0;
+
+display : none; z-index: 1; position: absolute; color: rgb(0, 0, 0);
+margin: auto;
+padding: 30px;
+padding-bottom: 10px;
+border: 5px solid #e1cdb1;
+width: 80%;
+background-color: #eee;
+font-family: LTSoul;
+margin-top: 30px;
+}
+
+#emptyif{
+  margin: 5px auto;
+  padding-bottom: 20px;
+  
+
+}
+
+#comebacktonormal {
+  display: inline-flex;
+  font-size: large;
+  background-color: #e1cdb1;
+  margin: 5px auto;
+  margin-bottom: 0%; 
+  text-align: center;
+}
+
+#comebacktonormal:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transition: background-color 1.5s ease, color 0.5s ease;
+
+}
+
+
+@media screen and (max-width: 800px) {
+  #silencemessage {
+    width: 95%;
+    padding: 15px;
+    padding-bottom: 5px;
+    font-size: small;
+  }
+#silencemessage_title{
+  font-size: small;
+}
+#comebacktonormal{
+  margin: 2.5px auto;
+  margin-bottom: 0%; 
+}
+#emptyif{
+  width: 95%; padding: 15px; font-size: small;
+}
+#emptyif h1{
+  font-size: 27.5px;
+
+}
+}
+  
+
+
+
+#silencemessage_format{
+  display: inline-block;
+}
+#silencemessage_format2nd{
+  margin-left: 5px;
+  display: inline-block;
+  list-style-position: outside;
+
+}
+
+
+
+
+/*For the main table for EBI/WWW
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+  border: 3px solid #73AD21;
+}
+#customers #jack td:nth-child(1), #customers #jack td:nth-child(2) {
+border: none;
+};
+
+#customers tr th{
+width: 10px;
+}
+
+*/
+
+#customers tr:hover {background-color: #ddd;}
+
+
+#customers tr th {
+  text-align: center;
+  font-size: 20px;
+  background-color: #f0f0f0; 
+}
+
+#customers tr th:nth-child(2), #customers tr th:nth-child(3) {
+  font-size: 40px;
+  border: 2px solid;
+  border-color:rgb(0, 0, 0) ;/*rgb(190, 188, 188)*/
+  
+}
+
+#customers tr td{
+  font-size: 17.5px;
+}
+#customers tr th:nth-child(1){
+  text-align:left;
+  border: 2px solid;
+  font-family: LTSoul;
+
+}
+
+
+
+
+
+#customers tr td:nth-child(1){
+  background-color: transparent;
+    width: 0;
+    height: 0;
+    border-left: 2px solid; border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    
+    padding: 0;
+    margin: 0;    
+    
+    
+}
+
+#customers tr td:nth-child(2){
+  background-color: rgb(240, 225, 225);
+  border: 1px solid; border-right: 2px solid; border-left: 2px solid;  border-color:rgb(190, 188, 188);
+}
+
+#customers tr td:nth-child(3){
+  background-color: rgb(225, 240, 227);
+  border: 1px solid;  border-color:rgb(190, 188, 188) ;
+  visibility: hidden; border: none; border-right: 2px solid; border-color:rgb(190, 188, 188);
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+#customers tr td:nth-child(1), #customers tr th:nth-child(1){
+  display: none;
+}
+}
+
+#customers tr td {
+content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slideshow-container1 {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text1 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext1 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot1 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade1 {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text1 {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#myVideo, #mutedVideo, #inbetweenVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display:none;
+
+  
+}
+
+#mutedVideo {
+  display: none;
+}
+
+
+
+
+
+
+
+#initialpromptforpresssubmit{
+  
+  width: 500px;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+text-align: center;
+}
+
+
+
+/*.video-container{
+  position: relative;
+}*/
+
+
+
+/*THE OLD FAKE VIDEO
+
+  #fakeVideo {
+  float: right; 
+  margin-left: 10px; 
+  margin-right: -40px;
+  margin-bottom: 5px;
+  margin-top: 20px; 
+  
+  width: 57%; height: 332px; object-fit: cover;
+  border-radius: 10px;
+
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}*/
+
+.vidthatsfake{
+  float: right;
+  width: 500px;
+  margin-right: 0px;
+}
+
+@media only screen and (max-width: 1150px){
+  .vidthatsfake {
+    width: 450px;
+  }}
+
+@media only screen and (max-width: 1050px){
+    .vidthatsfake {
+      width: 420px
+    }}
+
+
+    @media only screen and (max-width: 800px){
+      .vidthatsfake {
+        width: 375px
+      }}
+    
+@media only screen and (max-width: 750px){
+  .vidthatsfake {
+    width: 350px
+  }}
+
+@media only screen and (max-width: 650px){
+  .vidthatsfake {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+#replayButton {
+     
+      
+  right: 155px;
+  top: 52.5px;
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  background-color:#eee;
+  color: black;
+  font-size: small;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  white-space: normal;
+  line-height: 1.0;
+  font-family: LTSoul;
+
+}
+
+@media screen and (max-width: 700px) {
+  #pause-countdown{
+    right: 18px;
+  }
+  #countdown-value {
+    right: 10px;
+    }
+  #replayButton{
+    right: 55px;
+  }
+  #home {
+    right: 180px;
+  }
+}
+
+
+#loadingcircle{
+  position: absolute;
+  top: 49.5%;
+  left: 49.5%;
+  opacity: 0.6;
+  z-index: 1;
+  width: 55px;
+  height: 55px;
+}
+
+#home{
+  position: absolute;
+  right: 280px;
+  top: 27.5px;
+  opacity: 0.4;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+
+  /*background-color:transparent;*/
+  background-color: white;
+  
+  
+
+  background-image: url("art/home-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  #pause-countdown{
+    right: 18px;
+  }
+  #countdown-value {
+    right: 10px;
+    }
+  #replayButton{
+    right: 55px;
+  }
+  #home {
+    right: 180px;
+  }
+  #stop-consultation-btn{
+    left: 20px;
+  }
+  #executeButton{
+    right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  #myVideo {
+    width: 100%;
+  }}
+
+.mainimage {
+  float: right; 
+  margin-left: 10px; 
+  margin-bottom: 5px; 
+  border: solid black 1px; 
+  padding: 1px; 
+  width:35%; 
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .mainimage {
+    width: 45%;
+  }}
+*/
+
+
+
+
+
+
+
+
+  #note-textarea,#summary-textarea,#differentials-textarea,#examinations-textarea,#investigations-textarea {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 600px) {
+    #note-textarea,#summary-textarea,#differentials-textarea,#examinations-textarea,#investigations-textarea {
+      width: 100%;
+
+    }}
+
+
+
+
+
+#start-record-btn,#start-record-btn-for-differentials,#start-record-btn-for-summary,#start-record-btn-for-blood,#start-record-btn-for-examinations,
+#start-record-btn-for-investigations,#start-record-btn-for-riskfactors,#start-record-btn-for-treatments{
+  height: 165px;
+  width: 165px;
+}
+
+#start-record-btn:hover,#start-record-btn-for-differentials:hover,#start-record-btn-for-summary:hover,#start-record-btn-for-blood:hover, #start-record-btn-for-examinations:hover,
+#start-record-btn-for-investigations:hover,#start-record-btn-for-riskfactors:hover,#start-record-btn-for-treatments:hover {
+  height: 165px;
+  width: 165px;
+  padding: 3px;
+
+  
+  box-shadow: 0px 0px 9px 4px #747DE8;
+  animation: glow 1.5s linear infinite alternate;
+}
+
+@media screen and (max-width: 600px) {
+
+  #start-record-btn,#start-record-btn-for-differentials,#start-record-btn-for-summary,#start-record-btn-for-blood, #start-record-btn-for-examinations
+  #start-record-btn-for-investigations,#start-record-btn-for-riskfactors,#start-record-btn-for-treatments {
+    height: 65px;
+    width: 65px;
+
+  }
+  
+  #start-record-btn:hover,#start-record-btn-for-differentials:hover,#start-record-btn-for-summary:hover,#start-record-btn-for-blood:hover,#start-record-btn-for-examinations:hover,
+  #start-record-btn-for-investigations:hover,#start-record-btn-for-riskfactors:hover,#start-record-btn-for-treatments:hover {
+    height: 65px;
+    width: 65px;
+    padding: 3px;
+
+    
+    box-shadow: 0px 0px 9px 4px #747DE8;
+    animation: glow 1.5s linear infinite alternate;
+  }
+
+}
+
+
+#save-note-btn {
+  height: 40px;
+  width: 160px;
+  border: solid black 1px; 
+  padding: 5px;
+  margin-left: 10px;
+  margin-top: -50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(249, 191, 191);
+  color:black;
+  font-size: 1.1em;
+
+}
+
+#save-note-btn-for-summary,#save-note-btn-for-blood,#save-note-btn-for-investigations,
+#save-note-btn-for-riskfactors,#save-note-btn-for-treatments,#save-note-btn-for-differentials,#save-note-btn-for-examinations {
+  height: 70px;
+  width: 300px;
+  border: solid black 1px;
+  font-size: 35px;
+  font-family: LTSoul;
+
+
+  color:black;
+  position: absolute;
+  z-index: 1;
+
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 9px 9px 9px 9px;
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(196, 195, 195, 0.95);
+  transition: 0.6s ease;
+
+
+
+  /*margin-left: 10px;
+  margin-top: -20px;
+  margin-right: 10px;
+  margin-bottom: 10px;*/
+}
+
+#save-note-btn-for-summary:hover,#save-note-btn-for-blood:hover,#save-note-btn-for-investigations:hover,
+#save-note-btn-for-riskfactors:hover,#save-note-btn-for-treatments:hover,#save-note-btn-for-differentials:hover,#save-note-btn-for-examinations:hover {
+box-shadow: 0px 0px 9px 4px #747DE8;
+background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+
+
+
+
+
+
+#save-note-btn-for-summary,#save-note-btn-for-blood,#save-note-btn-for-investigations,
+#save-note-btn-for-riskfactors,#save-note-btn-for-treatments,#save-note-btn-for-differentials,#save-note-btn-for-examinations{
+  display: none;
+}
+
+/*
+#start-record-btn-for-consultation {
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+#start-record-btn-for-consultation:hover {
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+  padding: 1.5px;
+}
+
+#save-note-btn-for-consultation {
+  height: 35px;
+  width: 150px;
+  border: solid black 1px;
+  margin-left: 10px;
+  margin-top: -20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(249, 191, 191);
+  color:black;
+}
+
+*/
+
+
+
+
+
+
+
+/*----------------------------------SLIDESHOW IN REVIEW SECTION----------------------------------*/
+* {box-sizing: border-box; }
+body {font-family: Verdana, sans-serif; margin:0;background-image: url(art/so-white.png)}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+/* Next & previous buttons */
+.prev, .next, #executeButton, #stop-consultation-btn, #move-onto-questions-btn, #end-consultation-btn, #end-consultation-btn1, #start-consultation-btn,
+#move-onto-questions-btn_examinations, #move-onto-questions-btn_summary, #move-onto-questions-btn_differentials, 
+#move-onto-questions-btn_investigations, #move-onto-questions-btn_riskfactors, #move-onto-questions-btn_treatments
+
+{
+  cursor: pointer;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  margin-top: -22px;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(196, 195, 195, 0.8);
+  /*font-family: Involve;*/
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: LTSoul;
+  transition: box-shadow 0.3s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prev, .next {
+    position: absolute;
+    transition: box-shadow 0.3s;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.01);
+    margin-top: 5px;
+    transition: background-color 1.5s ease, color 0.5s ease;
+    background: rgba(19, 19, 19, 0.8);
+
+}
+
+
+
+#executeButton, #stop-consultation-btn, #move-onto-questions-btn, #end-consultation-btn, #end-consultation-btn1, #start-consultation-btn,
+#move-onto-questions-btn_examinations, #move-onto-questions-btn_summary, #move-onto-questions-btn_differentials, 
+#move-onto-questions-btn_investigations, #move-onto-questions-btn_riskfactors, #move-onto-questions-btn_treatments
+{
+  margin-top: 0px;
+height:auto;
+padding-top: 5px;
+padding-bottom: 5px;
+font-weight: 100;
+border-radius: 3px 3px 3px 3px;
+transition: background-color 1.5s ease, color 0.5s ease;
+}
+#start-consultation-btn {
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 0px;
+  background: #fbf2e5; /* Fallback color */
+  background: -webkit-linear-gradient(top, #fff7ef 0%, #fff1e3 44%, #faecdb 100%);
+  background: linear-gradient(to bottom, #fff7ef 0%, #fff1e3 44%, #faecdb 100%);
+  border: 0px solid #4CAF50;
+  border-color: #3a4f64;
+  border-radius: 30px;
+  color: #000000;
+  transition: transform 0.3s, background-color 0.3s; /* Add transition effect */
+  transform: translateY(2px); /* Initial slightly elevated effect */
+ 
+  box-shadow:
+  0 1px 0 rgba(0,0,0,.25),
+  inset 0 3px 2px rgba(255,255,255,.67),
+  inset 0 -3px 0 rgba(0,0,0,.14);
+
+  
+}
+
+#start-consultation-btn:hover {
+  transform: translateY(0); /* Lift the button on hover */
+  transition: background-color 1.5s ease, color 0.5s ease;
+
+}
+
+/*
+#start-consultation-btn{
+  font-size: large;
+}*/
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover, #executeButton:hover, #start-consultation-btn:hover {
+  background: rgba(105, 105, 105, 0.8);
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+/* Caption text */
+
+.text {
+  color: #000000;
+  font-size: 35px;
+  padding: 16px 12px;
+  position: absolute;
+  /*bottom: 8px;*/
+  width: 100%;
+  text-align: center;
+  font-family: LTSoul;
+margin-top: 40px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 0px 12px;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover, #hoverthedot {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@media only screen and (max-width: 600px) {
+  .prev, .next {margin-top: -75px;}
+}
+
+
+
+#hj {margin-top: -30px;}
+
+
+
+
+
+
+
+
+.vidthatsfake {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  
+  border-radius: 5px;
+}
+
+.vidthatsfake:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#fakeVideo {
+  border-radius: 5px 5px 0 0;
+  height: 330px;
+  object-fit: cover;
+
+}
+
+
+#placementofpage {
+  width: 46%;
+}
+
+
+
+@media only screen and (max-width: 850px){
+  #placementofpage {
+    width: 43%;
+  }}
+
+  @media only screen and (max-width: 750px){
+    #placementofpage {
+      width: 42%;
+    }}
+
+    
+
+    
+  
+
+  @media only screen and (max-width: 650px){
+    #placementofpage {
+      width: 100%;
+      margin-right: 10px;
+    }}
+
+
+.groupedvid {
+  padding: 2px 16px;
+}
+
+
+
+
+
+
+.containerhalfscreen {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full height of viewport */
+}
+
+.left-sidehalfscreen, .right-sidehalfscreen {
+  flex: 1; /* Takes half the screen */
+  display: flex;
+  justify-content: center; /* Center card horizontally */
+  align-items: center; /* Center card vertically */
+}
+
+
+.cardforchecklist {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  padding: 20px;
+  text-align: left;
+  font-family: LTSoul;
+  font-size: larger;
+  
+}
+
+@media (max-width: 850px) {
+  .containerhalfscreen {
+      flex-direction: column; /* Stack items vertically */
+      height: auto; /* Remove full-height on smaller screens */
+  }
+
+  .left-sidehalfscreen, .right-sidehalfscreen {
+      flex: none; /* Allow sections to take up full width */
+      width: 100%; /* Make each side take the full width */
+      margin: 10px 0; /* Add margin between sections for spacing */
+  }
+}
+
+
+
+
+.cardforchecklist h2 {
+  margin-top: 0;
+  font-size: 32px;
+  color: #333;
+}
+.cardforchecklist ul {
+  list-style-type: none;
+  padding: 0;
+}
+.cardforchecklist li {
+  background: #e0f7fa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+.cardforchecklist li::before {
+  content: "✔";
+  color: #00796b;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#messagebeforeacceptingmic, #messagebeforeacceptingmic_examinations, #messagebeforeacceptingmic_summary, #messagebeforeacceptingmic_differentials, #messagebeforeacceptingmic_investigations, #messagebeforeacceptingmic_riskfactors, #messagebeforeacceptingmic_treatments{
+  
+  
+  width: 300px;
+  border: 2px solid #000000;
+  padding: 0px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 30px 30px 35px rgba(0, 0, 0, 30);
+  
+  
+}
+
+#micisworking, #micisworkingexaminations, #micisworkingsummary, #micisworkingdifferentials, #micisworkinginvestigations, #micisworkingriskfactors, #micisworkingtreatments {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-Shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.8);
+
+  
+}
+
+#enlargify {
+  color: #333; /* A softer, dark gray instead of pure black */
+  font-size: 2rem; /* Use rem for scalable font size */
+  font-weight: bold; /* Bold text for more emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  animation: enlargeAndShrink 1.5s ease-in-out forwards; /* Smooth ease-in-out animation */
+}
+
+@keyframes enlargeAndShrink {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+    font-size: x-large;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    font-size: 3.5em;
+    color: #ffffff;
+
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+    font-size: x-large;
+  }
+}
+
+
+#enlargify2 {
+  animation: enlargeAndShrink2 4s ease-in-out forwards;
+  animation-delay: 0.5s; /* Delay to start after enlargify's animation */
+}
+
+@keyframes enlargeAndShrink2 {
+  
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    font-size: 1.2em;
+    color: #5b5b5b;
+
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    font-size: 0;
+  }
+}
+
+
+
+#enlargify3 {
+  animation: enlargeAndShrink3 2.5s ease-in-out forwards;
+  animation-delay: 5s; /* Delay to start after enlargify's animation */
+}
+
+@keyframes enlargeAndShrink3 {
+  
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    font-size: 1.5em;
+    color: #5b5b5b;
+  }
+  
+}
+
+
+#micisworking, #micisworkingexaminations, #micisworkingsummary, #micisworkingdifferentials, #micisworkinginvestigations, #micisworkingriskfactors, #micisworkingtreatments {
+  animation: enlargeAndShrink4 1s ease-in-out forwards;
+  animation-delay: 0s; /* Delay to start after enlargify's animation */
+}
+
+@keyframes enlargeAndShrink4 {
+  
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+    font-size: 8.5em;
+    color: #333;
+    box-Shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.8);
+
+  }
+  
+}
+
+
+
+
+
+
+/* IS FOR THE HORIZONTAL SCROLL OF THE DIFFERENT CASES*/
+
+/* Scroll container */
+div.scroll-container {
+  background-color: #333; /* Dark background */
+  overflow-x: auto; /* Horizontal scrolling only */
+  white-space: nowrap; /* Prevent wrapping */
+  padding: 20px; /* Add space inside */
+  display: block;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  
+  /* Customize the scrollbar */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #a0c7e0 #333; /* Thumb color and track color for Firefox */
+}
+
+/* Customize the scrollbar for Webkit browsers (Chrome, Safari) */
+div.scroll-container::-webkit-scrollbar {
+  width: 12px; /* Make the scrollbar wider */
+}
+
+div.scroll-container::-webkit-scrollbar-track {
+  background: #333; /* Track color */
+  border-radius: 12px;
+}
+
+div.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #3498db; /* Thumb color */
+  border-radius: 12px;
+  border: 3px solid #333; /* Border around the thumb */
+}
+
+div.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #2980b9; /* Darker color on hover */
+}
+
+/* Image styling */
+div.scroll-container img {
+  padding: 15px;
+  border-radius: 30px; /* Rounded corners for images */
+  transition: transform 0.4s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  display: block; /* Ensure the image behaves as a block element */
+  width: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Image container positioning */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 15px; /* Space between images */
+  width: 600px; /* Ensure fixed width for consistency */
+  height: 320px; /* Ensure fixed height for consistency */
+  cursor: pointer; /* Make the container cursor a pointer to indicate it’s clickable */
+
+}
+
+/* Image caption styles */
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: white; /* White text for contrast */
+  padding: 15px;
+  text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  transform: translateY(100%); /* Hide caption initially */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  box-sizing: border-box; /* Ensure padding does not affect dimensions */
+  border-radius: 10px; /* Rounded corners for images */
+  margin-bottom: 20px;
+
+}
+
+/* Hover effect on image caption */
+.image-container:hover .image-caption {
+  transform: translateY(-10%); /* Slide caption up */
+}
+
+.image-container:hover img {
+  transform: scale(1.05); /* Zoom effect on image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+}
+
+/* Caption text color change on hover */
+.image-container:hover .image-caption p {
+  color: #3498db; /* Blue text color */
+  font-weight: bold; /* Make text bold on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*TUTORIAL SECTION*/
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#save-imaging{
+  background-color: rgb(249, 191, 191);
+  color:black; 
+  border: solid black 1px;
+}
+
+
+#save-examinations {
+  background-color: rgb(249, 191, 191);
+  color:black; 
+  border: solid black 1px;
+}
+
+.videxam {
+  width: 200px;
+  padding: 10px;
+  border: 3px solid black;
+  margin: 0;
+  background-color: rgb(254, 226, 216);
+  text-align: center;
+  font-size:20px;
+  
+  border-radius: 10px;
+  font-family: LTSoul;
+
+}
+@media screen and (max-width: 600px) {
+  .videxam {
+    display:inline-block;
+    margin-bottom: 10px;
+  }}
+
+#examfindings-btn {
+  background-color: lightcyan;
+  color:black;
+  width: 265px;
+  height: 115px;
+  font-size: 25px;
+  border: solid black 3px;
+  margin-left: 10px;
+  border-radius: 10px; 
+}
+
+@media screen and (max-width: 600px) {
+  #examfindings-btn {
+    width: 200px;
+    height: 115px;
+    font-size: 18px;
+  }}
+
+
+
+
+
+
+
+
+
+#save-d1 {
+  background-color: rgb(249, 191, 191);
+  color:black; 
+  border: solid black 1px;
+}
+
+#save-d2 {
+  background-color: rgb(249, 191, 191);
+  color:black; 
+  border: solid black 1px;
+}
+
+#save-d3 {
+  background-color: rgb(249, 191, 191);
+  color:black; 
+  border: solid black 1px;
+}
+
+
+
+.app {
+  /*margin-left: 2%;
+  margin-right: 2%;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+  .container {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+
+    max-width: 1100px;
+    margin: auto;
+  
+  
+  }
+
+  @media screen and (max-width: 1200px) {
+    .container {margin-right: 1.5%; margin-left: 1.5%;}
+  }
+  @media screen and (max-width: 600px) {
+    .container {margin-right: 1.5%; margin-left: 1.5%;}
+  }
+
+
+
+#casename {
+  /*margin-left: 3.5%;*/
+  display: block;
+  /*font-family: Cheflat;*/
+}
+@media screen and (max-width: 700px) {
+  #casename {display: none;}
+}
+
+#casenameformobile {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  #casenameformobile {display: unset;}
+}
+
+
+
+#extraspacemobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  #extraspacemobile {display: unset;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.note {
+  width:100%;
+  
+}
+.header{
+  margin-left: 20px; 
+}
+
+.listen-note {
+  margin-left: 100px;
+}
+
+.delete-note {
+  margin-left: 50px;
+
+}
+
+.date {
+  margin-left: 750px;
+}
+
+.forgottoaskabout{
+  /*float: right;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.borderline{
+  border: 1px solid black; 
+  width: 100%; 
+  height: 1px; 
+  opacity: 0.2;
+}
+
+
+
+
+
+
+
+
+.important-not-to-miss .WWWEBItitles,
+.important-not-to-miss .evenbetterifgeneral,
+.important-not-to-miss .whatwentwellgeneral {
+  height: 1319px;
+}
+
+.stand-out-questions .WWWEBItitles,
+.stand-out-questions .evenbetterifgeneral,
+.stand-out-questions .whatwentwellgeneral {
+  height: 565px;
+}
+
+
+.WWWEBItitles{
+  
+  line-height: 1.5;border-style: solid; border-right-style: hidden;
+  width: 225px;  float: left;
+  font-size: 48px; height: 1800px;
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ */ font-family: "Brush Script MT", cursive;
+
+
+ /* color: rgb(25, 3, 134);*/
+
+  border-color: black;
+
+  padding-top: 0px;
+  
+
+  position: relative;
+
+  background-color: rgba(211, 211, 211, 0.8);
+
+  /*display: flex;
+  align-items: center*/
+}
+
+
+
+.WWWEBItitlesfont{
+  /*background-color: #f9a3c7;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;*/
+  color: white;
+  text-shadow: 1.5px 1.5px 0 #f06292, 1px 1px 0 #f8bbd0;
+
+}
+
+.titlesformatting{
+  background-color: rgba(102, 66, 66, 0.8);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.titlesbottommargin{
+  padding-bottom: 15px;
+
+}
+
+
+
+/*tick and cross*/
+.titleforEBI{
+  line-height: 1.5;
+  font-size: 58px;
+  margin-left: 40%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  
+}
+
+.titleforWWW{
+  line-height: 1.5;
+  font-size: 58px;
+  margin-left: 40%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+}
+
+.box-enclosingcrossandtick{
+  border-bottom-style: solid;
+}
+
+.colourofcross{
+  background: rgb(251, 139, 139);
+}
+
+.colouroftick{
+  background: rgb(124, 244, 124);
+}
+
+
+/*actual EBI and WWW*/
+.evenbetterifgeneral {
+  line-height: 1.3;   font-size: 20px;border-style: solid; border-right-style: hidden;
+  font-weight: 400;
+
+  margin-left: 0%; width: 39%;  float: left; 
+  background: rgb(249, 221, 221);
+}
+
+.whatwentwellgeneral {
+  line-height: 1.3; font-size: 20px;border-style: solid;
+
+  margin-left: 0%; width: 39%; /*height: 1870px;*/ float: left; 
+  background: rgb(209, 228, 236); margin-bottom: 0px; /*background: rgb(197, 244, 197);*/
+  margin-bottom: 50px;
+
+}
+
+.important-colour-box{
+  background-color: rgb(209, 228, 236);
+  color: rgb(241, 58, 58);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*EBI*/
+#colorbox-painlocation-before,
+#colorbox-onset-before,
+#colorbox-character-before,
+#colorbox-radiate-before,
+#colorbox-associatedsymptoms-before,
+#colorbox-timecourse-before,
+#colorbox-makeitworse-before,
+#colorbox-makeitbetter-before,
+#colorbox-ratepain-before,
+#colorbox-happenbefore-before,
+#colorbox-ideas-before,
+#colorbox-concerns-before,
+#colorbox-expectations-before,
+#colorbox-familyhistory-before,
+#colorbox-pmh-before,
+#colorbox-surgical-before,
+#colorbox-meds-before,
+#colorbox-allergies-before,
+#colorbox-job-before,
+#colorbox-walkdistance-before,
+#colorbox-homesituation-before,
+#colorbox-smoking-before,
+#colorbox-alcohol-before,
+
+#colorbox-dyspnoea-before,
+#colorbox-orthopnoea-before,
+#colorbox-pnd-before,
+#colorbox-cough-before,
+#colorbox-FHheartconditions-before,
+#colorbox-diabetes-before,
+#colorbox-hypertension-before,
+#colorbox-heartattacks-before,
+#colorbox-dizziness-before,
+#colorbox-physicalactivity-before,
+#colorbox-palpitations-before,
+
+#colorbox-sleepapnoea-before,
+#colorbox-pad-before,
+#colorbox-fever-before,
+#colorbox-weight-before,
+#colorbox-oedema-before {
+  content: "";  display: block;  height: 10px;  background-color: rgb(249, 221, 221);
+}
+
+
+
+
+
+
+
+#colorbox-painlocation,
+#colorbox-onset,
+#colorbox-character,
+#colorbox-radiate,
+#colorbox-associatedsymptoms,
+#colorbox-timecourse,
+#colorbox-makeitworse,
+#colorbox-makeitbetter,
+#colorbox-ratepain,
+#colorbox-happenbefore,
+#colorbox-ideas,
+#colorbox-concerns,
+#colorbox-expectations,
+#colorbox-familyhistory,
+#colorbox-pmh,
+#colorbox-surgical,
+#colorbox-meds,
+#colorbox-allergies,
+#colorbox-job,
+#colorbox-walkdistance,
+#colorbox-homesituation,
+#colorbox-smoking,
+#colorbox-alcohol,
+
+#colorbox-dyspnoea,
+#colorbox-orthopnoea,
+#colorbox-pnd,
+#colorbox-cough,
+#colorbox-FHheartconditions,
+#colorbox-diabetes,
+#colorbox-hypertension,
+#colorbox-heartattacks,
+#colorbox-dizziness,
+#colorbox-physicalactivity,
+#colorbox-palpitations,
+
+#colorbox-sleepapnoea,
+#colorbox-pad,
+#colorbox-fever,
+#colorbox-weight,
+#colorbox-oedema {
+  margin-top: -10px;
+}
+
+
+/*WWW*/
+#correct-colorbox-painlocation-before,
+#correct-colorbox-onset-before,
+#correct-colorbox-character-before,
+#correct-colorbox-radiate-before,
+#correct-colorbox-associatedsymptoms-before,
+#correct-colorbox-timecourse-before,
+#correct-colorbox-makeitworse-before,
+#correct-colorbox-makeitbetter-before,
+#correct-colorbox-ratepain-before,
+#correct-colorbox-happenbefore-before,
+#correct-colorbox-ideas-before,
+#correct-colorbox-concerns-before,
+#correct-colorbox-expectations-before,
+#correct-colorbox-familyhistory-before,
+#correct-colorbox-pmh-before,
+#correct-colorbox-surgical-before,
+#correct-colorbox-meds-before,
+#correct-colorbox-allergies-before,
+#correct-colorbox-job-before,
+#correct-colorbox-walkdistance-before,
+#correct-colorbox-homesituation-before,
+#correct-colorbox-smoking-before,
+#correct-colorbox-alcohol-before,
+
+#correct-colorbox-dyspnoea-before,
+#correct-colorbox-orthopnoea-before,
+#correct-colorbox-pnd-before,
+#correct-colorbox-cough-before,
+#correct-colorbox-FHheartconditions-before,
+#correct-colorbox-diabetes-before,
+#correct-colorbox-hypertension-before,
+#correct-colorbox-heartattacks-before,
+#correct-colorbox-dizziness-before,
+#correct-colorbox-physicalactivity-before,
+#correct-colorbox-palpitations-before,
+
+#correct-colorbox-sleepapnoea-before,
+#correct-colorbox-pad-before,
+#correct-colorbox-fever-before,
+#correct-colorbox-weight-before,
+#correct-colorbox-oedema-before
+{
+  content: "";  display: block;  height: 10px;  background-color: rgb(209, 228, 236);
+}
+
+#correct-colorbox-painlocation,
+#correct-colorbox-onset,
+#correct-colorbox-character,
+#correct-colorbox-radiate,
+#correct-colorbox-associatedsymptoms,
+#correct-colorbox-timecourse,
+#correct-colorbox-makeitworse,
+#correct-colorbox-makeitbetter,
+#correct-colorbox-ratepain,
+#correct-colorbox-happenbefore,
+#correct-colorbox-ideas,
+#correct-colorbox-concerns,
+#correct-colorbox-expectations,
+#correct-colorbox-familyhistory,
+#correct-colorbox-pmh,
+#correct-colorbox-surgical,
+#correct-colorbox-meds,
+#correct-colorbox-allergies,
+#correct-colorbox-job,
+#correct-colorbox-walkdistance,
+#correct-colorbox-homesituation,
+#correct-colorbox-smoking,
+#correct-colorbox-alcohol,
+
+#correct-colorbox-dyspnoea,
+#correct-colorbox-orthopnoea,
+#correct-colorbox-pnd,
+#correct-colorbox-cough,
+#correct-colorbox-FHheartconditions,
+#correct-colorbox-diabetes,
+#correct-colorbox-hypertension,
+#correct-colorbox-heartattacks,
+#correct-colorbox-dizziness,
+#correct-colorbox-physicalactivity,
+#correct-colorbox-palpitations,
+
+#correct-colorbox-sleepapnoea,
+#correct-colorbox-pad,
+#correct-colorbox-fever,
+#correct-colorbox-weight,
+#correct-colorbox-oedema {
+  color: rgb(209, 228, 236);
+  margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*these next 4 paragraphs you can delete*/
+#colorbox {
+  /*background-color: #747DE8;*/
+  margin-top: -10px;
+
+}
+
+#colorbox:before {
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: #747DE8;
+}
+
+.correct-colour-box{
+  color: rgb(209, 228, 236); /*this is for the font of the text when the patient hasnt said that word */
+  /*background-color: #f06292;*/
+  margin-top: -10px;
+} 
+
+.correct-colour-box:before {
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: #f06292;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#socratestitle{
+  position: absolute;
+  top: 250px;
+  font-size: 25px;
+}
+
+#icetitle{
+  position: absolute;
+  top: 1000px;
+  font-size: 25px;
+}
+
+#socialtitle{
+  position: absolute;
+  top: 1530px;
+  font-size: 25px;
+}
+
+#generalhistorygrade{
+  margin-left: 10px;
+  /*margin-top: 100px;*/
+
+  font-size: 28px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  position: absolute;
+  bottom: 10px;
+  
+}
+
+
+
+
+
+#review-section p {
+  margin-left: 0px;
+}
+
+
+
+
+
+
+.forgottoaskaboutlinespacingforreview {
+  line-height: 1;
+}
+
+#whatQuyoumissed-btn{
+  background-color: rgb(249, 191, 191);
+  color:black;
+  border: solid black 1px;
+  height: 5%;
+  padding: 5px;
+  font-size: 100%;
+}
+
+
+
+#numberedlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: apples;
+}
+
+#titleforquestions{
+  content: "Q"counter(apples)":";
+  counter-increment: apples;
+  font-family: LTSoul;
+  color: rgb(25, 3, 134);
+  font-weight: bold;
+  font-size: 22.5px;
+  margin-right: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+#summarymodel, #differentialsmodel, #examinationsmodel, #bloodtestsmodel, #otherinvestigationsmodel, #riskfactorsmodel, #treatmentsmodel {
+  color: #109D59;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .WWWEBItitles {
+    font-size: 30px;
+    width: 140px;   
+  }
+  #socratestitle, #icetitle, #socialtitle, #generalhistorygrade {  
+    padding-right: 15px;
+    font-size: 22.5px;
+  }
+  .titlesformatting {
+    padding-left: 10px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .WWWEBItitles {
+    font-size: 25px;
+    width: 115px;   
+  }
+  #socratestitle, #icetitle, #socialtitle, #generalhistorygrade {  
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  .titlesformatting {
+    padding-left: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+.evenbetterifgeneral, .whatwentwellgeneral {width: 37%;}
+}
+
+@media screen and (max-width: 1000px) {
+.evenbetterifgeneral, .whatwentwellgeneral {width: 370px;}
+}
+
+@media screen and (max-width: 965px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 345px;}
+  }
+
+@media screen and (max-width: 910px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 320px;}
+}
+
+@media screen and (max-width: 875px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 300px;}
+  }
+
+@media screen and (max-width: 825px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 280px;}
+}
+
+@media screen and (max-width: 790px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 260px;}
+  }
+
+@media screen and (max-width: 765px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 240px;}
+  }
+
+@media screen and (max-width: 740px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 225px;}
+  }
+
+@media screen and (max-width: 720px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 215px;}
+  }
+
+@media screen and (max-width: 700px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 205px;}
+}
+
+@media screen and (max-width: 675px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 195px;}
+  }  
+  
+@media screen and (max-width: 650px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 190px;}
+  }  
+
+@media screen and (max-width: 600px) {
+.evenbetterifgeneral, .whatwentwellgeneral {width: 185px;}
+}
+
+@media screen and (max-width: 550px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 165px;}
+  }  
+
+@media screen and (max-width: 525px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 155px;}
+  }
+
+
+@media screen and (max-width: 500px) {
+  .evenbetterifgeneral, .whatwentwellgeneral {width: 140px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#topbanner, #bottombanner {
+  width: 100%;
+  background-color: #000000;
+  height: 0px;
+  margin-top: -5px;
+}
+#bottombanner {
+  margin-top: -10px;
+  height: 0px;
+  /*transition: box-shadow 5.9s;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);*/
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(154, 147, 113, 0.95)
+
+
+}
+
+
+a {
+	font-size: 15.5px;
+	text-transform: uppercase;
+}
+
+/*
+@media screen and (max-width: 600px) {
+  a {
+    font-size: 12.5px;   
+  }}
+*/
+
+.nav-area {
+	/*background: #262626;*/
+  /*background:rgb(237, 250, 255);*//*  background:rgb(248, 253, 255); background:rgb(237, 250, 255); */
+
+
+
+
+  
+
+/*
+background: rgb(237, 250, 255);
+background: -webkit-linear-gradient(top, rgb(252, 254, 255) 0%,rgb(243, 252, 255) 44%,rgb(237, 250, 255) 66%, rgb(233, 249, 255) 100%);
+background: linear-gradient(to bottom, rgb(252, 254, 255) 0%,rgb(243, 252, 255) 44%,rgb(237, 250, 255) 66%, rgb(233, 249, 255) 100%);
+box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(154, 147, 113, 0.95);
+*/
+
+background-color: rgba(236, 236, 236, 0.5); /* Transparent background */
+background: -webkit-linear-gradient(top, rgb(252, 254, 255) 0%,rgba(249, 249, 249, 0.5) 44%,rgba(232, 232, 232, 0.5) 66%, rgba(208, 208, 208, 0.5) 100%);
+background: linear-gradient(to bottom, rgb(252, 254, 255) 0%,rgb(249, 249, 249, 0.5) 44%,rgba(233, 232, 232, 0.5) 66%, rgb(208, 208, 208, 0.5) 100%);
+    
+
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+
+}
+.nav-area:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.nav-area ul {
+	list-style: none;
+	margin: 0;
+  text-align: center;
+}
+.nav-area>ul>li {
+	
+	position:relative;
+  display: inline-block;
+  margin-top: 14px;
+  z-index: 1;
+}
+.nav-area ul li a {
+	text-decoration: none;
+	/*color: #fff;*/
+  color: #000000;
+	padding: 10px 11px;
+	display: block;
+
+}
+/*
+@media screen and (max-width: 1000px) {
+  .nav-area ul li a {
+    padding: 15px 10px;
+  }}
+
+  @media screen and (max-width: 600px) {
+    .nav-area ul li a {
+      padding: 15px 0px;
+    }}
+*/
+
+    
+
+.nav-area ul li:hover a {
+	background: #c7d7e8;
+  border-radius: 10px;
+  color: white;
+  transition: background-color 1.5s ease, color 0.5s ease;
+}
+
+#r1s a:hover{
+  transition: background-color 0.0s ease;
+}
+
+.nav-area ul ul {
+	position: absolute;
+  padding: 0;
+	min-width: 138px;
+	display: none;
+	top: 100%;
+	left: 0;
+}
+.nav-area ul li:hover>ul {
+	display: block;
+}
+.nav-area ul ul li:hover a {
+	background: #262626;
+}
+.nav-area ul ul li {
+	position: relative;
+}
+.nav-area ul ul ul {
+	top: 0;
+	left: 100%;
+}
+.nav-area ul ul ul li:hover a {
+	background: #34495e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  font-family: sans-serif;
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  background: cyan;
+  border: 5px solid blue;
+}
+
+legend {
+  padding: 10px;
+  background: blue;
+  color: cyan;
+}
+
+
+
+
+
+
+
+.mobilenavarea {
+  visibility: hidden;
+}
+
+
+
+
+@media only screen and (min-width: 878px) {
+  #myLinks {
+    visibility: hidden;
+    }}
+
+
+    #myLinks a {
+      display: block; /* Display links as blocks (vertically) */
+      padding: 5px 0; /* Add padding for better spacing */
+      
+      }
+
+      #myLinks a:hover {
+        background: #c7d7e8;
+        border-radius: 10px;
+        color: white;
+        transition: background-color 1.5s ease, color 0.5s ease;
+      }
+
+
+@media only screen and (max-width: 878px) {
+  .mobilenavarea {
+    visibility: visible;
+  
+    }
+}
+
+@media only screen and (max-width: 878px) {
+  #r1,#r1s {
+    display: none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
+*/
+
+
+
+
+.wrapper {
+  width: 1000px;
+  /*margin: 0 auto;*/
+  height: 100%;
+  padding-top: 0px;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 750px;
+  }}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 500px;
+  }}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 450px;
+  }}
+
+
+
+#quiz {
+  background-color: #3a4f64;
+  padding-bottom: 60px;
+  width: 100%;
+  border-radius: 2%;
+  color: #fff;
+  /*text-align: center;*/
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+#quiz > h1 {
+/*  text-align: center;*/
+  padding-top: 25px;
+  font-size: 20px;
+  
+}
+
+.headerformultiplechoice{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.questions {
+  font-size: 28px;
+  font-weight: 700;
+  /*font-style: italic;*/
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 20px;
+}
+
+.answers div {
+  padding: 10px 0 0 0;
+  font-size: 16px;
+}
+
+.answers div:hover {
+  cursor: pointer;
+  color: #FBCB43;
+}
+
+.answers {
+  padding: 0px 0 10px 0px;
+}
+
+.answers div {
+  width: 50%;
+ /* margin: 0 auto;*/
+ padding-left: 20px;
+  padding-bottom: 15px;
+  border-top: 1px solid grey;
+}
+
+.answers div:first-child {
+  border: none;
+}
+
+.checker {
+ /* display: inline-block;*/
+  width: 200px;
+  margin: 0 auto;
+}
+
+.correct, .false {
+  background-color: #109D59;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 4px;
+  float: left;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.false {
+  background-color: #DC4437;
+}
+
+
+
+
+
+
+
+
+.special-cell {
+  position: relative;
+
+}
+
+.special-cell::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  z-index: -1; /* Places it behind the border of the cell */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+p {
+  font-family: LTSoul;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.columnhomepage {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  text-align: center;
+
+}
+
+.homeimages {
+  float: right; 
+  margin-left: 10px; 
+  margin-bottom: 5px; 
+  border: solid black 1px; 
+  padding: 1px; 
+  width:100%; 
+  border-radius: 15px; 
+  height: 300px; 
+  cursor: pointer;
+  
+}
+
+.homeimages:hover {
+  height: 290px;
+  width: 97%;
+
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.rowhomepage {margin: 0 -5px;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+/* Clear floats after the columns */
+.rowhomepage:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+
+/*
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 175px;
+  text-align: center;
+  background-color: #f1f1f1;
+  
+}
+*/
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .columnhomepage {
+    width: 50%;
+    height: 230px;
+    display: block;
+    margin-bottom: 20px;
+  }}
+
+  @media screen and (max-width: 600px) {
+  .homeimages{
+    height: 200px;
+  }
+  .homeimages:hover{
+    height: 190px;
+  }}
+
+  @media screen and (max-width: 1000px) {
+    .homeimages{
+      height: 200px;
+    }
+    .homeimages:hover{
+      height: 190px;
+    }}
+
+
+
+
+
+  footer {
+      text-align: center;
+      padding: 3px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+  }
+
+
+
+
+
+    table {
+      font-family: LTSoul;/*font-family: arial, sans-serif;*/
+      border-collapse: collapse;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px
+    }
+
+
+
+
+  body {
+    /*background-color: lightblue;*/
+    background-color: rgb(255, 255, 255);/* rgb(233, 246, 253); rgb(250, 252, 252)*/
+
+
+    /*background: #fbf2e5;
+    background: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%,#fffdfb 44%,#fffbf6 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%,#fffdfb 44%,#fffbf6 100%);
+    */
+
+
+  }/*MAKE SURE TO ALSO CHANGE THE COLOUR IN SCRIPT.JS NEAR THE START*/
+
+  
+  h1,h2,h3,h4,h5, h4 {
+    font-family: LTSoulBold;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  
+  #bodybox {
+    margin: auto;
+    max-width: 550px;
+    
+    font: 15px arial, sans-serif;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 15px;
+  }
+  
+  #chatborder {
+    border-style: solid;
+    background-color: #f6f9f6;
+    border-width: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 15px;
+    border-radius: 15px;
+  }
+
+    
+  
+  
+  .chatlog {
+     font: 15px arial, sans-serif;
+  }
+  
+  #chatbox {
+    font: 17px arial, sans-serif;
+    height: 22px;
+    width: 100%;
+  }
+  
+  h1 {
+    margin: auto;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    margin-left: 20px;
+  }
+
+  */
+
+

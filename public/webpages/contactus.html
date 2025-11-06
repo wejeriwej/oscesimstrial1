@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" href="art/logoupdated1.png">
+
+    
+    
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9ff;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            font-family: LTSoul;
+        }
+        h2 {
+            text-align: center;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #name, #email, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            outline: none;
+            max-width: 100%; /* Prevent overflow */
+
+        }
+        button {
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            max-width: 100%; /* Prevent overflow */
+
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #007BFF;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+        }
+
+
+        @media (max-width: 1300px) {
+        .container {
+            width: 90%; /* Take up 90% of the screen width */
+            padding: 20px; /* Adjust padding */
+        }
+        h2 {
+            font-size: 1.5em; /* Adjust heading size */
+        }
+        .contact-info p {
+            font-size: 14px; /* Smaller text for contact info */
+        }
+        .contact-form {
+            padding: 0 10px; /* Add padding inside the form */
+        }
+        label {
+            font-size: 14px; /* Smaller label font */
+        }
+        
+        button {
+            padding: 12px; /* Adjust button padding */
+            font-size: 14px; /* Smaller font size */
+        }
+        .social-links a {
+            font-size: 12px; /* Smaller icons */
+        }
+        
+    }
+
+    /* Media Query for very small screens (mobile) */
+    @media (max-width: 480px) {
+        .container {margin: 25px;
+        }
+        h2 {
+            font-size: 1.3em; /* Even smaller heading for very small screens */
+        }
+        .contact-info p {
+            font-size: 12px; /* Adjust contact info font for very small screens */
+        }
+        .social-links a {
+            font-size: 16px; /* Smaller icons for very small screens */
+        }
+        button {
+            padding: 10px; /* Smaller button for very small screens */
+              font-size: 12px; /* Smaller font size for button */
+        }
+        
+    }
+
+
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script src="added.js"></script>
+
+    <special-header></special-header>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> oscesims@gmail.com</p>
+            <p><strong>Whatsapp:</strong> +44 480 609 640</p>
+            <!--<p><strong>Address:</strong> 123 Business Street, City, Country</p>-->
+        </div>
+        <form class="contact-form" action="mailto:zak.francillon@gmail.com" method="post" enctype="text/plain">
+            <label for="name" >Your name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" style="display: flex; align-items: center; justify-content: center;">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+
+    <other-cases></other-cases>
+    <special-footer></special-footer>
+
+</body>
+</html>
