@@ -14,7 +14,6 @@ app.use(cors()); // Allow requests from your web page
 app.post("/api/oscetrial", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
 
-
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -32,7 +31,7 @@ app.post("/api/oscetrial", async (req, res) => {
                                     Marc's answer:` },
         ],
         temperature: 0.1,
-        max_tokens: 50,
+        max_tokens: 15,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0
@@ -46,6 +45,157 @@ app.post("/api/oscetrial", async (req, res) => {
     res.status(500).json({ error: "Failed to connect to OpenAI" });
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.post("/api/2ndcase", async (req, res) => {
+  const { input, previousquestion, response_question } = req.body;
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", //gpt-4o-mini
+        messages: [
+          { role: "system", content: "you're Jason, a 40 year old male. with right upper quadrant sharp pain that comes + goes for last 2 months + happened this morning. You're in a consultation room & the Dr is asking you questions. Answer as Jason" },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                    Your previous response: ${response_question || "N/A"}
+                                    New Dr question: ${input}
+                                    Jason's answer:` },
+        ],
+        temperature: 0.1,
+        max_tokens: 15,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
+
+    const data = await response.json();
+    res.json({ content: data.choices[0].message.content.trim() });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to connect to OpenAI" });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.post("/api/3rdcase", async (req, res) => {
+  const { input, previousquestion, response_question } = req.body;
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", //gpt-4o-mini
+        messages: [
+          { role: "system", content: "you're Daniel, a 33 yr old male. with a worsening cough over last 6 weeks associated with pleuritic Rt chest pain + fever. You're in a consultation room & the Dr is asking you questions. Answer as Daniel" },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                    Your previous response: ${response_question || "N/A"}
+                                    New Dr question: ${input}
+                                    Daniel's answer:` },
+        ],
+        temperature: 0.1,
+        max_tokens: 15,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
+
+    const data = await response.json();
+    res.json({ content: data.choices[0].message.content.trim() });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to connect to OpenAI" });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+app.post("/api/4thcase", async (req, res) => {
+  const { input, previousquestion, response_question } = req.body;
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", //gpt-4o-mini
+        messages: [
+          { role: "system", content: "you're John, a 31 year old male. with new right sided arm + leg weakness over last 3 hrs with facial droop + slurred speech. You're in a consultation room & the Dr is asking you questions. Answer as John" },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                    Your previous response: ${response_question || "N/A"}
+                                    New Dr question: ${input}
+                                    John's answer:` },
+        ],
+        temperature: 0.1,
+        max_tokens: 15,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
+
+    const data = await response.json();
+    res.json({ content: data.choices[0].message.content.trim() });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to connect to OpenAI" });
+  }
+});
+
+
+
+
+
+
+
+
+
 
 
 

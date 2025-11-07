@@ -1463,6 +1463,39 @@ else if (noteContent === ""){
       
 
 
+
+
+
+
+
+
+
+
+
+
+      const generateResponse = async (input) => {
+  const response = await fetch("https://oscesimstrial1.onrender.com/api/3rdcase", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ 
+      input: input,
+      previousquestion: previousquestion,
+      response_question: response_question })
+  });
+
+  const data = await response.json();
+  return data.content;
+};
+
+
+
+
+
+
+
+/*      THE OFFICIAL VERSION THAT WORKS WITHOUT RENDER SERVER AND JUST LOALLY!!!!!!!!!
+
+
     //const prompt = "You are Jill, a 50 year old female with pain. The pain started yesterday at 3pm and is located on the upper right side of your tummy region. It is worse when bending down. You smoke 20 cigarettes per day, have 2 children, and do not take drugs. You are currently taking paracetamol for the pain. Imagine you are in a consultation room and the doctor is asking you questions, and you are Jill for all of the next questions that we ask in this thread. Do not give any more information than what the doctor asked for. Make it seem like Jill is not very smart and occasionally asks questions to the doctor. Question: What is your name?, Answer: My name is Jill";
     //const prompt = "you are jill, a 50 year old female. with pain. started yesterday at 3pm. located on the upper right side of your tummy region. that is worse when bending down. You smoke 20 cigarettes per day. you have 2 children. and don't take drugs. You take paracetamol for the pain. Imagine you are in a consultation room and the doctor is asking you questions and you are jill for all of the next questions Do not give any more information than what the doctor asked for. Input:"
     const prompt = "you're Daniel, a 33 yr old male. with a worsening cough over last 6 weeks associated with pleuritic Rt chest pain + fever. You're in a consultation room & the Dr is asking you questions. Answer as Daniel"
@@ -1527,6 +1560,22 @@ else if (noteContent === ""){
   return generatedText;
 };
     
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 const handleUserInput = async (noteContent) => {
@@ -1649,7 +1698,7 @@ const handleUserInput = async (noteContent) => {
   });
   await Promise.all([responsePromise, videoPromise]);
   const response = await responsePromise;
-  document.getElementById('chatgpt-response').innerText = prompt + '\n' + 'Previous question: ' + previousquestion  + '\n' + 'Response to previous question:' + response_question  + '\n' + 'question: ' + response + '\n' + '\n' + noteContent ; // Update the content of the element with ID 'chatgpt-response' REMOVE THIS!!!!
+  document.getElementById('chatgpt-response').innerText = 'Previous question: ' + previousquestion  + '\n' + 'Response to previous question:' + response_question  + '\n' + 'question: ' + response + '\n' + '\n' + noteContent ; // Update the content of the element with ID 'chatgpt-response' REMOVE THIS!!!!
 
   /*
   const synth = window.speechSynthesis;

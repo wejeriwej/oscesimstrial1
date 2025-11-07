@@ -1805,10 +1805,10 @@ else if (noteContent === ""){
 
 
 
-
+/*
 var previousquestion = "What's your name";//delete these in the real thing
 var response_question = "I'm Marc";//delete these in the real thing
-
+*/
 
 
 
@@ -2137,7 +2137,7 @@ const handleUserInput = async (noteContent) => {
   });
   await Promise.all([responsePromise, videoPromise]);
   const response = await responsePromise;
-  document.getElementById('chatgpt-response').innerText = prompt + '\n' + 'Previous question: ' + previousquestion  + '\n' + 'Response to previous question:' + response_question  + '\n' + 'question: ' + response + '\n' + '\n' + noteContent ; // Update the content of the element with ID 'chatgpt-response' REMOVE THIS!!!!
+  document.getElementById('chatgpt-response').innerText = 'Previous question: ' + previousquestion  + '\n' + 'Response to previous question:' + response_question  + '\n' + 'question: ' + response + '\n' + '\n' + noteContent ; // Update the content of the element with ID 'chatgpt-response' REMOVE THIS!!!!
 
   /*
   const synth = window.speechSynthesis;
