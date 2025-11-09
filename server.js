@@ -9,6 +9,7 @@ app.use(cors()); // Allow requests from your web page
 
 
 
+// ---------------- CHAT GPT API ---------------- //
 
 
 app.post("/api/oscetrial", async (req, res) => {
@@ -197,10 +198,60 @@ app.post("/api/4thcase", async (req, res) => {
 
 
 
+// ---------------- ELEVENLABS ---------------- //
+
+
+
+app.post("/api/voicezak", async (req, res) => {
+  const { text, voiceId } = req.body;
+
+  try {
+    const response = await fetch(
+      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/stream`,
+      {
+        method: "POST",
+        headers: {
+          "Accept": "audio/mpeg",
+          "xi-api-key": process.env.ELEVEN_LABS_API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text,
+          model_id: "eleven_monolingual_v1",
+          voice_settings: {
+            stability: 0.5,
+            similarity_boost: 0.5,
+          },
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error("ElevenLabs API error:", errText);
+      return res.status(response.status).send(errText);
+    }
+
+    const audioBuffer = await response.arrayBuffer();
+    res.set("Content-Type", "audio/mpeg");
+    res.send(Buffer.from(audioBuffer));
+  } catch (error) {
+    console.error("Error contacting ElevenLabs:", error);
+    res.status(500).json({ error: "Failed to fetch from ElevenLabs" });
+  }
+});
 
 
 
 
+
+
+
+
+
+
+
+// ---------------------------------------------------------- //
 
 
 app.listen(3000, () => console.log("✅ Server running on http://localhost:3000"));
