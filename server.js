@@ -16,50 +16,68 @@ app.post("/api/oscetrial", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
 
  try {
-    const prompt = `you're Marc, a 31 year old male. with constant severe heavy chest pain since this morning. You're in a consultation room & the Dr is asking you questions. Answer as Marc`;
+    // Helper function to check and complete sentence
+    const completeSentence = async (responseText) => {
+      // Loop until we have a sentence-ending punctuation mark
+      while (!(responseText.endsWith('.') || responseText.endsWith('!') || responseText.endsWith('?'))) {
+        // Make a request to complete the sentence
+        const additionalResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo", // or another model, like "gpt-4"
+            messages: [
+              { role: "system", content: "you're Marc, a 31 year old male. with constant severe heavy chest pain since this morning. You're in a consultation room & the Dr is asking you questions. Answer as Marc" },
+              { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                          Your previous response: ${response_question || "N/A"}
+                                          New Dr question: ${input}
+                                          Marc's answer: ${responseText}` },
+            ],
+            temperature: 0.1,
+            max_tokens: 20, // Allow a bit more tokens for completion
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0
+          }),
+        });
 
-    let generatedText = "";
-    
-    // Function to call OpenAI API with a prompt
-    const fetchOpenAIResponse = async (prompt) => {
-      const response = await fetch("https://api.openai.com/v1/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "text-davinci-003",  // You can change to gpt-3.5 or gpt-4 here
-          prompt: prompt,
-          temperature: 0.1,
-          max_tokens: 5,
-          top_p: 1,
-          frequency_penalty: 0,
-          presence_penalty: 0,
-        }),
-      });
-
-      const data = await response.json();
-      return data.choices[0].text.trim();
+        const data = await additionalResponse.json();
+        responseText += ' ' + data.choices[0].message.content.trim(); // Add the extra tokens
+      }
+      return responseText.trim();
     };
 
-    // Initial response from OpenAI
-    let currentResponse = await fetchOpenAIResponse(
-      `${prompt}\nPrevious question: ${previousquestion || "N/A"}\nResponse to previous question: ${response_question || "N/A"}\nQuestion: ${input}\nAnswer:`
-    );
+    // Initial request to OpenAI
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", //gpt-4o-mini
+        messages: [
+          { role: "system", content: "you're Marc, a 31 year old male. with constant severe heavy chest pain since this morning. You're in a consultation room & the Dr is asking you questions. Answer as Marc" },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                    Your previous response: ${response_question || "N/A"}
+                                    New Dr question: ${input}
+                                    Marc's answer:` },
+        ],
+        temperature: 0.1,
+        max_tokens: 15,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
 
-    // Ensure the response ends with punctuation
-    while (!(currentResponse.endsWith('.') || currentResponse.endsWith('!') || currentResponse.endsWith('?'))) {
-      const additionalResponse = await fetchOpenAIResponse(
-        `${prompt}\nPrevious question: ${previousquestion || "N/A"}\nResponse to previous question: ${response_question || "N/A"}\nQuestion: ${input}\nAnswer: ${currentResponse}`
-      );
-      currentResponse += ' ' + additionalResponse;
-    }
-
-    // Send the final response back to the frontend
-    res.json({ content: currentResponse });
+    const data = await response.json();
+    res.json({ content: data.choices[0].message.content.trim() });
   } catch (error) {
-    console.error("Error:", error);
+    console.error(error);
     res.status(500).json({ error: "Failed to connect to OpenAI" });
   }
 });
