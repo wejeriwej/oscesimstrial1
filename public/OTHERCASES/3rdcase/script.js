@@ -1704,38 +1704,28 @@ const handleUserInput = async (noteContent) => {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance(response);
 */
-
-
-const text11L = response; // Use the response from your API call
-const voiceId = 'lqMuuvylPBO6NGJ3N3d4';
-const apiKey = 'XX';
-
-const headers = new Headers();
-headers.append('Accept', 'audio/mpeg');
-headers.append('xi-api-key', apiKey);
-headers.append('Content-Type', 'application/json');
-
-const body = JSON.stringify({
-    text: text11L,
-    model_id: 'eleven_monolingual_v1',
-    voice_settings: {
-        stability: 0.5,
-        similarity_boost: 0.5
-    }
-});
-
 // Call the Eleven Labs API for text-to-speech
-fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/stream`, {
+
+
+
+
+
+
+
+
+fetch('https://oscesimstrial1.onrender.com/api/voicezak', {
     method: 'POST',
-    headers: headers,
-    body: body
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        text: text11L,
+        voiceId: 'lqMuuvylPBO6NGJ3N3d4'
+    })
 })
 .then(response => {
-    if (response.ok) {
-        return response.blob();
-    } else {
+    if (!response.ok) {
         throw new Error('Failed to synthesize speech');
     }
+    return response.blob();
 })
 .then(blob => {
     const url = window.URL.createObjectURL(blob);

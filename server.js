@@ -99,6 +99,40 @@ app.post("/api/2ndcase", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
 
   try {
+    const completeSentence = async (responseText) => {
+      // Loop until we have a sentence-ending punctuation mark
+      while (!(responseText.endsWith('.') || responseText.endsWith('!') || responseText.endsWith('?'))) {
+        // Make a request to complete the sentence
+        const additionalResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo", // or another model, like "gpt-4"
+            messages: [
+              { role: "system", content: "you're Jason, a 40 year old male. with right upper quadrant sharp pain that comes + goes for last 2 months + happened this morning. You're in a consultation room & the Dr is asking you questions. Answer as Jason" },
+              { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                          Your previous response: ${response_question || "N/A"}
+                                          New Dr question: ${input}
+                                          Jason's answer: ${responseText}` },
+            ],
+            temperature: 0.1,
+            max_tokens: 20, // Allow a bit more tokens for completion
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0
+          }),
+        });
+
+        const data = await additionalResponse.json();
+        responseText += ' ' + data.choices[0].message.content.trim(); // Add the extra tokens
+      }
+      return responseText.trim();
+    };
+
+    // Initial request to OpenAI 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -147,6 +181,42 @@ app.post("/api/3rdcase", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
 
   try {
+    
+    const completeSentence = async (responseText) => {
+      // Loop until we have a sentence-ending punctuation mark
+      while (!(responseText.endsWith('.') || responseText.endsWith('!') || responseText.endsWith('?'))) {
+        // Make a request to complete the sentence
+        const additionalResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo", // or another model, like "gpt-4"
+            messages: [
+              { role: "system", content: "you're Daniel, a 33 yr old male. with a worsening cough over last 6 weeks associated with pleuritic Rt chest pain + fever. You're in a consultation room & the Dr is asking you questions. Answer as Daniel" },
+              { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                          Your previous response: ${response_question || "N/A"}
+                                          New Dr question: ${input}
+                                          Daniel's answer: ${responseText}` },
+            ],
+            temperature: 0.1,
+            max_tokens: 20, // Allow a bit more tokens for completion
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0
+          }),
+        });
+
+        const data = await additionalResponse.json();
+        responseText += ' ' + data.choices[0].message.content.trim(); // Add the extra tokens
+      }
+      return responseText.trim();
+    };
+
+    // Initial request to OpenAI
+    
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -193,6 +263,41 @@ app.post("/api/4thcase", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
 
   try {
+const completeSentence = async (responseText) => {
+      // Loop until we have a sentence-ending punctuation mark
+      while (!(responseText.endsWith('.') || responseText.endsWith('!') || responseText.endsWith('?'))) {
+        // Make a request to complete the sentence
+        const additionalResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo", // or another model, like "gpt-4"
+            messages: [
+              { role: "system", content: "you're John, a 31 year old male. with new right sided arm + leg weakness over last 3 hrs with facial droop + slurred speech. You're in a consultation room & the Dr is asking you questions. Answer as John" },
+              { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}
+                                          Your previous response: ${response_question || "N/A"}
+                                          New Dr question: ${input}
+                                          John's answer: ${responseText}` },
+            ],
+            temperature: 0.1,
+            max_tokens: 20, // Allow a bit more tokens for completion
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0
+          }),
+        });
+
+        const data = await additionalResponse.json();
+        responseText += ' ' + data.choices[0].message.content.trim(); // Add the extra tokens
+      }
+      return responseText.trim();
+    };
+
+    // Initial request to OpenAI
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
