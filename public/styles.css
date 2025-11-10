@@ -2785,6 +2785,10 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transition: background-color 1.5s ease, color 0.5s ease;
 }
 
+#r1s {
+ z-index: 2; 
+}
+
 #r1s a:hover{
   transition: background-color 0.0s ease;
 }

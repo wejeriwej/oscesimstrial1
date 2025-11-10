@@ -11,6 +11,91 @@ app.use(cors()); // Allow requests from your web page
 
 // ---------------- CHAT GPT API ---------------- //
 
+const completeSentence = async (responseText) => {
+  // Loop until we have a sentence-ending punctuation mark
+  while (!(responseText.endsWith('.') || responseText.endsWith('!') || responseText.endsWith('?'))) {
+    // Make a request to complete the sentence
+    const additionalResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", // or another model
+        messages: [
+          { role: "system", content: "you're Marc, a 31-year-old male, experiencing constant severe chest pain." },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}\nYour previous response: ${response_question || "N/A"}\nNew Dr question: ${input}\nMarc's answer: ${responseText}` },
+        ],
+        temperature: 0.1,
+        max_tokens: 50, // Increased max_tokens to give more room for completion
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
+
+    const data = await additionalResponse.json();
+
+    if (data.choices && data.choices[0].message && data.choices[0].message.content) {
+      // Append the additional response to the current text
+      responseText += ' ' + data.choices[0].message.content.trim();
+    } else {
+      break; // If no content, exit the loop to prevent infinite requests
+    }
+  }
+  return responseText.trim(); // Return the completed sentence
+};
+
+// Rest of your route logic:
+app.post("/api/oscetrial", async (req, res) => {
+  const { input, previousquestion, response_question } = req.body;
+
+  try {
+    // Start with an initial request to OpenAI
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo", 
+        messages: [
+          { role: "system", content: "you're Marc, a 31-year-old male, experiencing constant severe chest pain." },
+          { role: "user", content: `Previous Dr question: ${previousquestion || "N/A"}\nYour previous response: ${response_question || "N/A"}\nNew Dr question: ${input}\nMarc's answer:` },
+        ],
+        temperature: 0.1,
+        max_tokens: 15,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0
+      }),
+    });
+
+    const data = await response.json();
+
+    // Start processing and completing the sentence if needed
+    if (data.choices && data.choices[0].message && data.choices[0].message.content) {
+      let responseText = data.choices[0].message.content.trim();
+
+      // Complete the sentence if it's not properly punctuated
+      responseText = await completeSentence(responseText);
+      res.json({ content: responseText });
+    } else {
+      res.status(500).json({ error: "No choices returned from OpenAI" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to connect to OpenAI" });
+  }
+});
+
+
+
+
+
+/*
 
 app.post("/api/oscetrial", async (req, res) => {
   const { input, previousquestion, response_question } = req.body;
@@ -81,7 +166,7 @@ app.post("/api/oscetrial", async (req, res) => {
     res.status(500).json({ error: "Failed to connect to OpenAI" });
   }
 });
-
+*/
 
 
 
